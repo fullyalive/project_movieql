@@ -1,16 +1,12 @@
 type Movie {
   id: Int!
-  name: String!
-  score: Int!
+  title: String!
+  rating: Float!
+  summary: String!
+  language: String!
+  medium_cover_image: String!
 }
 
 type Query {
   movies: [Movie]!
-  movie(id: Int!): Movie
-}
-
-type Mutation {
-  # id는 db에 의해서 자동 생성될거기 때문에 생략해준다
-  addMovie(score: Int!, name: String!): Movie!
-  deleteMovie(id: Int!): Boolean!
 }
